@@ -1,0 +1,72 @@
+/* Estilos generales */
+body {
+    margin: 0;
+    padding: 0;
+    background-color: black;
+    font-family: Arial, sans-serif;
+    color: white;
+}
+
+/* Contenedor principal */
+.main-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 100vh;
+    text-align: center;
+}
+
+/* Lentes de Ferxxo */
+.lens-container {
+    position: relative;
+    animation: zoomIn 3s ease-in-out;
+}
+
+.lenses {
+    width: 300px;
+    transition: transform 0.5s ease-in-out;
+}
+
+.lenses:hover {
+    transform: scale(1.1);
+}
+
+/* Mensaje Feliz Cumpleaños */
+.birthday-message {
+    font-family: 'Brush Script MT', cursive;
+    font-size: 2rem;
+    color: #39FF14; /* Neon green */
+    text-shadow: 0 0 10px #39FF14, 0 0 20px #39FF14, 0 0 30px #39FF14, 0 0 40px #39FF14;
+    margin-top: 20px;
+    text-transform: uppercase;
+}
+
+/* Estilos para el botón */
+.open-invitation-btn {
+    background-color: transparent;
+    border: 2px solid #FF5733; /* Neon orange */
+    color: #FF5733;
+    padding: 10px 20px;
+    font-size: 1.2rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+    margin-top: 30px;
+    text-decoration: none;
+}
+
+.open-invitation-btn:hover {
+    background-color: #FF5733;
+    color: black;
+}
+
+/* Animación de zoom de lentes */
+@keyframes zoomIn {
+    0% {
+        transform: scale(0.8);
+    }
+    100% {
+        transform: scale(1);
+    }
+}

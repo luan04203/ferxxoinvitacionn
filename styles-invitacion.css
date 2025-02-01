@@ -1,0 +1,275 @@
+/* Estilos generales */
+body {
+    margin: 0;
+    padding: 0;
+    background-color: black;
+    font-family: Arial, sans-serif;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    overflow-y: auto;
+    height: 100%;
+    position: relative;
+    text-align: center;
+}
+
+/* Fondo de la página con opacidad, sin afectar el contenido */
+.background-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('imagenes/portada\ álbum\ ferxxo\ \(1\).jpg'); /* Nueva imagen de fondo */
+    background-size: 100%; /* Reducir tamaño de la imagen de fondo */
+    background-position: center center; /* Centra la imagen */
+    background-repeat: no-repeat;
+    z-index: -1; /* Asegura que la imagen quede en el fondo */
+}
+
+/* Capa para aplicar opacidad solo a la imagen de fondo */
+.background-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Negro con opacidad (puedes ajustar el valor de 0.5) */
+    z-index: -2; /* Asegura que esté detrás del fondo */
+}
+
+/* El resto del contenido de la página */
+.content {
+    position: relative;
+    z-index: 1;
+    width: 100%;
+    text-align: center;
+    padding: 20px;
+}
+
+/* Video responsivo */
+.responsive-video {
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+/* Estilos para videos en pantallas pequeñas */
+@media (max-width: 768px) {
+    .responsive-video {
+        width: 100%;
+        height: auto;
+    }
+}
+
+/* Tipografía de los títulos tipo grafiti color verde neón */
+.section-title {
+    font-family: 'Brush Script MT', cursive;
+    font-size: 2.5rem;
+    color: #39FF14;
+    text-shadow: 0 0 10px #39FF14, 0 0 20px #39FF14, 0 0 30px #39FF14, 0 0 40px #39FF14;
+    text-align: center;
+    margin-top: 40px;
+}
+
+/* Lentes Ferxxo sin animación y centrado */
+.lenses-section {
+    margin-top: 20px;
+    text-align: center;
+}
+
+.floating-lenses-img {
+    width: 200px;
+}
+
+/* Mensaje Feliz Cumpleaños */
+.birthday-message {
+    font-family: 'Brush Script MT', cursive;
+    font-size: 3rem;
+    color: #39FF14;
+    text-shadow: 0 0 10px #39FF14, 0 0 20px #39FF14, 0 0 30px #39FF14, 0 0 40px #39FF14;
+    text-align: center;
+    margin-top: 20px;
+}
+
+/* Sección de número y fotos */
+.number-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 50px;
+    flex-wrap: wrap;
+}
+
+.number-img {
+    display: flex;
+    align-items: center;
+    margin: 0 20px;
+}
+
+.number {
+    font-size: 5rem;
+    color: #FF5733;
+    margin-right: 20px;
+}
+
+.person-img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+}
+
+/* Sección de Canciones Favoritas */
+.songs-section {
+    margin-top: 50px;
+    padding: 20px;
+}
+
+.songs-text {
+    font-size: 1.5rem;
+    color: white;
+    margin-bottom: 20px;
+}
+
+.songs-list a {
+    color: #FF5733;
+    font-size: 1.5rem;
+    text-decoration: none;
+}
+
+.songs-list a:hover {
+    text-decoration: underline;
+}
+
+iframe {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    width: 100%;
+    max-width: 560px;
+    height: 315px;
+}
+
+/* Sección Merch */
+.merch-section {
+    margin-top: 50px;
+    padding: 20px;
+}
+
+.merch-text {
+    font-size: 1.5rem;
+    color: white;
+    margin-bottom: 20px;
+}
+
+.merch-item {
+    display: inline-block;
+    margin: 10px;
+    text-align: center;
+}
+
+.merch-img {
+    width: 150px;
+    height: 150px;
+    border-radius: 10px;
+}
+
+.merch-item p {
+    color: #FF5733;
+}
+
+/* Sección de Mañanitas Oficiales */
+.mornings-section {
+    margin-top: 50px;
+    padding: 20px;
+}
+
+/* Invitados especiales */
+.special-guests {
+    text-align: center;
+    margin-top: 50px;
+}
+
+.guest {
+    display: inline-block;
+    margin: 10px;
+}
+
+.guest-img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+}
+
+/* Botón de Confirmar Invitación */
+.confirm-invitation {
+    margin-top: 40px;
+    text-align: center;
+}
+
+.confirm-button {
+    padding: 15px 30px;
+    font-size: 1.5rem;
+    background-color: transparent;
+    border: 2px solid #39FF14;
+    color: #FF5733;
+    border-radius: 10px;
+    text-decoration: none;
+    font-family: 'Brush Script MT', cursive;
+    transition: 0.3s ease;
+}
+
+.confirm-button:hover {
+    background-color: #39FF14;
+    color: black;
+    transform: scale(1.1);
+}
+
+/* Pie de página */
+.footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 50px;
+}
+
+.footer-logo img {
+    width: 100px;
+}
+
+.footer-text {
+    color: white;
+    font-size: 1rem;
+}
+
+/* Estilos Responsivos para móviles */
+@media (max-width: 768px) {
+    .floating-lenses-img {
+        width: 150px;
+    }
+
+    .number-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .number {
+        font-size: 3rem;
+    }
+
+    iframe {
+        height: 200px;
+    }
+
+    .merch-img {
+        width: 120px;
+        height: 120px;
+    }
+
+    .confirm-button {
+        font-size: 1.2rem;
+    }
+}
